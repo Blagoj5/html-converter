@@ -9,7 +9,7 @@ export const htmlConverterReact = (
   htmlParserConfig: HTMLReactParserOptions = { trim: true }
 ): ReturnType => {
   // Sanitizing the data
-  let cleanData = sanitize(str, dompurifyConfig || ({} as any));
+  const cleanData = sanitize(str, dompurifyConfig || ({} as any));
 
   if (typeof cleanData !== 'string')
     throw new Error(

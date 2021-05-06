@@ -2,7 +2,7 @@ import DOMPurify, { sanitize } from 'isomorphic-dompurify';
 
 /**
  * @param str The string to be sanitized and converted to html
- * @param element If you provide tag it will create new element with that tag and return the newly created element with the sanitized version of the string inside of it. However, if you provide HTMLElement it will just append the sanitzed string to that element with empty return
+ * @param element If you provide tag it will create new element with that tag and return the newly created element with the sanitized version of the string inside of it. However, if you provide HTMLElement it will just append the sanitzed string to that element
  * @param dompurifyConfig Read dompurify documentation on npm/yarn.
  *
  */
@@ -17,7 +17,7 @@ export const htmlConverter = (
     );
 
   // Sanitizing the data
-  let cleanData = sanitize(str, dompurifyConfig || {});
+  const cleanData = sanitize(str, dompurifyConfig || {});
 
   if (typeof cleanData !== 'string')
     throw new Error(
@@ -25,7 +25,7 @@ export const htmlConverter = (
     );
 
   if (typeof element === 'string') {
-    var dom = document.createElement(element);
+    const dom = document.createElement(element);
     // dom.innerHTML = cleanData;
     dom.insertAdjacentHTML('beforeend', cleanData);
 

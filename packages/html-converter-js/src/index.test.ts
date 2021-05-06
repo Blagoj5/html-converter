@@ -48,6 +48,7 @@ describe('htmlConverter', () => {
     htmlUseCasesDangerous.forEach((useCase) => {
       element!.innerHTML = ''; // reset
 
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const [_, cleanData] = htmlConverter(useCase, 'div');
 
       expect(cleanData).toEqual(expect.not.stringMatching(dangerousTags));
@@ -59,6 +60,7 @@ describe('htmlConverter', () => {
     stringUseCasesDangerous.forEach((useCase) => {
       element!.innerHTML = ''; // reset
 
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const [_, cleanData] = htmlConverter(useCase, 'div');
 
       expect(cleanData).toEqual(expect.not.stringMatching(dangerousTags));
