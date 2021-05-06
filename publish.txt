@@ -1,0 +1,2 @@
+I have to do manual patching for packages. yarn patch
+And after push it will automaticaly detect package version change. However keep in mind that everytime a new version is added for example: 1.0.1 .. etc etc -> it has to be manually update in html-converter's package.json
