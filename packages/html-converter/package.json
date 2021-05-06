@@ -29,8 +29,8 @@
   "author": "Blagoj",
   "license": "MIT",
   "dependencies": {
-    "html-converter-js": "1.0.0",
-    "html-converter-react": "1.0.0"
+    "html-converter-js": "^1.0.0",
+    "html-converter-react": "^1.0.0"
   },
   "devDependencies": {
     "@types/jsdom": "^16.2.10",

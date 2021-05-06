@@ -6,6 +6,13 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "react",
+    "typescript",
+    "javascript",
+    "sanitization",
+    "xss"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Blagoj5/html-converter"
