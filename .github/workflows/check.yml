@@ -27,6 +27,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
       - run: yarn install --pure-lockfile
+      - name: Eslint
+        run: yarn eslint
       - name: Build Code
         run: yarn build
       - name: Test Code
