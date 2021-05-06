@@ -1,6 +1,6 @@
-## html-converter
+## html-converter-full
 
-Are you tired of thinking for ways how to safely convert your string to a html or using dangerouslysetinnerhtml and worrying about any xss attacks when doing so? Well worry not, html-converter provides easy way to convert your string into a safely sanitized html. It's built on top of dompurify and it's made to work with react and vanilla js.
+Are you tired of thinking for ways how to safely convert your string to a html or using dangerouslysetinnerhtml and worrying about any xss attacks when doing so? Well worry not, html-converter-full provides easy way to convert your string into a safely sanitized html. It's built on top of dompurify and it's made to work with react and vanilla js.
 
 ### What and why is sanitization important?
 
@@ -11,21 +11,21 @@ Data Sanitization or in this case XSS Sanitization is crucial to prevent a [XSS 
 1. html-converter-react - Isomorphic React converter (works on SSR and CSR) for translating your string into a html. <b>Returns JSX.Element | JSX.Element[] | string with sanitized data</b>(all dangerous tags removes)
 2. html-converter-js - Vanilla Js converter (works only on CSR) for translating your string into a html. Read bellow to see how it works
 
-### html-converter
+### html-converter-full
 
 It has both html-converter-react and html-converter-js
 
 #### Installation
 
 ```
-npm install html-converter
-yarn add html-converter
+npm install html-converter-full
+yarn add html-converter-full
 ```
 
 #### Usage
 
 ```js
-import { htmlConverterReact, htmlConverter } from 'html-converter';
+import { htmlConverterReact, htmlConverter } from 'html-converter-full';
 ```
 
 ### html-converter-react
