@@ -1,17 +1,17 @@
-name: Run checks for html-converter
+name: Publish and checks for html-converter
 on:
   push:
     branches: [main] # run on pushes to master
-    paths-ignore:
-      - "!./pacakges/**"
+    paths:
+      - "pacakges/**"
   pull_request:
     branches: [main] # run on pushes to master
     paths-ignore:
-      - "!./pacakges/**"
+      - "pacakges/**"
   pull_request_review:
     branches: [main] # run on pushes to master
     paths-ignore:
-      - "!./pacakges/**"
+      - "pacakges/**"
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
