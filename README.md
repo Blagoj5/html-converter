@@ -25,14 +25,14 @@ yarn add html-converter-full
 #### Usage
 
 ```js
-import { htmlConverterReact, htmlConverter } from 'html-converter-full';
+import { htmlConverterReact, htmlConverter } from 'html-converter';
 ```
 
 ### html-converter-react
 
 Works both on server side and client side (CSR/SSR). You can use Next.js/Gatsby.js/CRA
 
-#### Installation
+#### Seperate Installation
 
 ```
 npm install html-converter-react
@@ -78,7 +78,7 @@ const App = () => {
 
 Works only on client-side
 
-#### Installation
+#### Seperate Installation
 
 ```
 npm install html-converter-js
