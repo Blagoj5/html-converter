@@ -25,7 +25,7 @@
   "bugs": {
     "url": "git+https://github.com/Blagoj5/html-converter/issues"
   },
-  "homepage": "https://github.com/Blagoj5/html-converter/tree/main/packages/html-converter#readme",
+  "homepage": "https://github.com/Blagoj5/html-converter#readme",
   "author": "Blagoj",
   "license": "MIT",
   "dependencies": {

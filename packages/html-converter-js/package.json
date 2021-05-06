@@ -3,6 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blagoj5/html-converter"
+  },
+  "bugs": {
+    "url": "git+https://github.com/Blagoj5/html-converter/issues"
+  },
+  "homepage": "https://github.com/Blagoj5/html-converter#readme",
+  "license": "MIT",
   "scripts": {
     "test": "jest --verbose",
     "build": "rm -fr dist && tsc",
@@ -10,7 +22,6 @@
     "start": "node dist/index.js"
   },
   "author": "Blagoj",
-  "license": "ISC",
   "dependencies": {
     "isomorphic-dompurify": "^0.13.0"
   },
