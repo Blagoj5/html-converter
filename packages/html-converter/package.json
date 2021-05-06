@@ -1,15 +1,33 @@
 {
   "name": "html-converter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Utility functions that convert your string into a safely sanitized html",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "javascript",
+    "sanitization",
+    "xss"
+  ],
   "scripts": {
     "build": "rm -fr dist && tsc",
     "watch": "tsc --watch",
     "start": "node dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blagoj5/html-converter"
+  },
+  "bugs": {
+    "url": "git+https://github.com/Blagoj5/html-converter/issues"
+  },
+  "homepage": "https://github.com/Blagoj5/html-converter/tree/main/packages/html-converter#readme",
   "author": "Blagoj",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "html-converter-js": "1.0.0",
     "html-converter-react": "1.0.0"
