@@ -1,6 +1,6 @@
 {
   "name": "html-converter-full",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility functions that convert your string into a safely sanitized html",
   "main": "dist/index.js",
   "files": [
