@@ -6,10 +6,10 @@
   "private": true,
   "scripts": {
     "eslint": "eslint .",
-    "build": "yarn workspace html-converter-react build && yarn workspace html-converter-js build && yarn workspace html-converter build",
+    "build": "yarn workspace html-converter-react build && yarn workspace html-converter-js build && yarn workspace html-converter-full build",
     "test": "yarn workspace html-converter-js test && yarn workspace html-converter-react test",
-    "patch": "yarn workspace html-converter-react patch --version && yarn workspace html-converter-js patch --version && yarn workspace html-converter patch --version",
-    "publish": "yarn workspace html-converter-react publish && yarn workspace html-converter-js publish && yarn workspace html-converter publish"
+    "patch": "yarn workspace html-converter-react patch --version && yarn workspace html-converter-js patch --version && yarn workspace html-converter-full patch --version",
+    "publish": "yarn workspace html-converter-react publish && yarn workspace html-converter-js publish && yarn workspace html-converter-full publish"
   },
   "repository": {
     "type": "git",
