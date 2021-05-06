@@ -4,7 +4,7 @@ Are you tired of thinking for ways how to safely convert your string to a html o
 
 ### What and why is sanitization important?
 
-Data Sanitization or in this case XSS Sanitization is crucial to prevent a [XSS Attack](https://owasp.org/www-community/attacks/xss/). Sanitization must be done before rendering any third-party content into the UI. So what html-converter does is it removes any dangeroues tags like `<script /> or alert` (of course if you intend to have some dangerous tags in your code, you can completely disable sanitization or filter out those tags)
+Data Sanitization or in this case XSS Sanitization is crucial to prevent a [XSS Attack](https://owasp.org/www-community/attacks/xss/). Sanitization must be done before rendering any third-party content into the UI. So what html-converter does is it removes any dangeroues tags like `<script /> or alert` (of course if you intend to have some dangerous tags in your code, you can completely disable sanitization or filter out those tags
 
 ### Two main functions for converting:
 
