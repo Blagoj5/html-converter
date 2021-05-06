@@ -8,8 +8,8 @@
     "eslint": "eslint .",
     "build": "yarn workspace html-converter-react build && yarn workspace html-converter-js build && yarn workspace html-converter-full build",
     "test": "yarn workspace html-converter-js test && yarn workspace html-converter-react test",
-    "patch": "yarn workspace html-converter-react patch --version && yarn workspace html-converter-js patch --version && yarn workspace html-converter-full patch --version",
-    "publish": "yarn workspace html-converter-react publish && yarn workspace html-converter-js publish && yarn workspace html-converter-full publish"
+    "patch:workspaces": "yarn workspace html-converter-react version --patch && yarn workspace html-converter-js version --patch && yarn workspace html-converter-full version --patch",
+    "publish:packages": "yarn workspace html-converter-react publish && yarn workspace html-converter-js publish && yarn workspace html-converter-full publish"
   },
   "repository": {
     "type": "git",
