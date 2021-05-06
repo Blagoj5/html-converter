@@ -1,0 +1,33 @@
+{
+  "name": "html-converter-workspaces",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "yarn workspace html-converter build && yarn workspace html-converter-js build && yarn workspace html-converter-react build",
+    "test": "yarn workspace html-converter test && yarn workspace html-converter-js test && yarn workspace html-converter-react test"
+  },
+  "author": "Blagoj",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/jsdom": "^16.2.10",
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "browser-env": "^3.3.0",
+    "jest": "^26.6.3",
+    "jsdom": "^16.5.3",
+    "react": "^17.0.2",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
