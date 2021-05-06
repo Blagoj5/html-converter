@@ -33,6 +33,8 @@ jobs:
         run: yarn build
       - name: Test Code
         run: yarn test
+      - name: Go into main html-converter
+        run: cd packages/html-converter
       - name: Publish if version has been updated
         uses: pascalgn/npm-publish-action@1.3.7
         with: # All of theses inputs are optional
@@ -46,3 +48,4 @@ jobs:
         env: # More info about the environment variables in the README
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
+      - run: ls

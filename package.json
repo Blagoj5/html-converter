@@ -7,7 +7,7 @@
   "scripts": {
     "eslint": "eslint .",
     "build": "yarn workspace html-converter-react build && yarn workspace html-converter-js build && yarn workspace html-converter build",
-    "test": "yarn workspace html-converter test && yarn workspace html-converter-js test && yarn workspace html-converter-react test"
+    "test": "yarn workspace html-converter-js test && yarn workspace html-converter-react test"
   },
   "repository": {
     "type": "git",
