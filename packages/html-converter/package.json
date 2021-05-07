@@ -1,6 +1,6 @@
 {
   "name": "html-converter-full",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utility functions that convert your string into a safely sanitized html",
   "main": "dist/index.js",
   "files": [
@@ -29,8 +29,8 @@
   "author": "Blagoj",
   "license": "MIT",
   "dependencies": {
-    "html-converter-js": "^1.0.0",
-    "html-converter-react": "^1.0.0"
+    "html-converter-js": "^1.0.5",
+    "html-converter-react": "^1.0.3"
   },
   "devDependencies": {
     "@types/jsdom": "^16.2.10",
