@@ -3,15 +3,15 @@ on:
   push:
     branches: [main] # run on pushes to master
     paths:
-      - "pacakges/**"
+      - "packages/**"
   pull_request:
     branches: [main] # run on pushes to master
     paths-ignore:
-      - "pacakges/**"
+      - "packages/**"
   pull_request_review:
     branches: [main] # run on pushes to master
     paths-ignore:
-      - "pacakges/**"
+      - "packages/**"
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
