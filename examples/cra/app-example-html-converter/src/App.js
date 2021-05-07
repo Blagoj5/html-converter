@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { htmlConverterReact } from 'html-converter-react';
+// OR
 import { htmlConverterReact as _htmlConverterReact } from 'html-converter-full';
 
 const text = '<p>Paragraph</p>';
