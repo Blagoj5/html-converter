@@ -1,0 +1,10 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Blagoj",
+  "license": "MIT",
+  "dependencies": {
+    "html-converter-full": "^1.0.4"
+  }
+}
