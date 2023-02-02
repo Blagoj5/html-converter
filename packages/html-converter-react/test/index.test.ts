@@ -1,25 +1,30 @@
-import { htmlConverterReact } from '.';
+import { htmlConverterReact } from "../src";
 
 const dangerousTags = /(script)|(alert)/;
-const htmlUseCases = ['<p>Test</p>', '<p>Test</p><b>Test-Bold</b>', '<div>test</div>'];
+const htmlUseCases = [
+  "<p>Test</p>",
+  "<p>Test</p><b>Test-Bold</b>",
+  "<div>test</div>",
+];
 const htmlUseCasesDangerous = [
   '<p onClick={alert("Im dangerous")}>Test</p>',
-  '<p><script></script></p>',
-  '<div>test<script>Steal Something</script></div>',
+  "<p><script></script></p>",
+  "<div>test<script>Steal Something</script></div>",
 ];
-const stringUseCases = ['Test', 'TestTest-Bold', 'test'];
-const stringUseCasesDangerous = ['Test<script>test</script>'];
+const stringUseCases = ["Test", "TestTest-Bold", "test"];
+const stringUseCasesDangerous = ["Test<script>test</script>"];
 
-describe('htmlConverterReact', () => {
-  test('should return error if invalid options are passed to dompurify', () => {
-    const convertedDataCallback = () => htmlConverterReact(htmlUseCases[0], { RETURN_DOM: true });
+describe("htmlConverterReact", () => {
+  test("should return error if invalid options are passed to dompurify", () => {
+    const convertedDataCallback = () =>
+      htmlConverterReact(htmlUseCases[0], { RETURN_DOM: true });
     expect(convertedDataCallback).toThrow();
   });
 
-  test('should return JSX.Element or JSX.Element[]', () => {
+  test("should return JSX.Element or JSX.Element[]", () => {
     htmlUseCases.forEach((useCase) => {
       let convertedValue = htmlConverterReact(useCase);
-      expect(typeof convertedValue === 'object').toBeTruthy();
+      expect(typeof convertedValue === "object").toBeTruthy();
       if (Array.isArray(convertedValue)) {
         expect(convertedValue).toHaveLength(2);
         convertedValue = convertedValue[0]; // get the first elment for checking if the object is in the right form
@@ -33,10 +38,10 @@ describe('htmlConverterReact', () => {
     });
   });
 
-  test('should return sanitized JSX.Element or JSX.Element[]', () => {
+  test("should return sanitized JSX.Element or JSX.Element[]", () => {
     htmlUseCasesDangerous.forEach((useCase) => {
       let convertedValue = htmlConverterReact(useCase);
-      expect(typeof convertedValue === 'object').toBeTruthy(); // needs to be JSX.Element or JSX.Element[]
+      expect(typeof convertedValue === "object").toBeTruthy(); // needs to be JSX.Element or JSX.Element[]
       if (Array.isArray(convertedValue)) {
         expect(convertedValue).toHaveLength(2);
         convertedValue = convertedValue[0]; // get the first elment for checking if the object is in the right form
@@ -48,22 +53,26 @@ describe('htmlConverterReact', () => {
         props: (convertedValue as JSX.Element).props,
       });
 
-      expect((convertedValue as JSX.Element).props.children).toEqual(expect.not.stringMatching(dangerousTags));
+      expect((convertedValue as JSX.Element).props.children).toEqual(
+        expect.not.stringMatching(dangerousTags)
+      );
     });
   });
 
-  test('should return string', () => {
+  test("should return string", () => {
     stringUseCases.map((useCase) => {
-      expect(typeof htmlConverterReact(useCase) === 'string').toBeTruthy();
+      expect(typeof htmlConverterReact(useCase) === "string").toBeTruthy();
     });
   });
 
-  test('should return sanitized string', () => {
+  test("should return sanitized string", () => {
     stringUseCasesDangerous.map((useCase) => {
       const convertedValue = htmlConverterReact(useCase, undefined);
 
-      expect(typeof convertedValue === 'string').toBeTruthy();
-      expect(convertedValue as string).toEqual(expect.not.stringMatching(dangerousTags));
+      expect(typeof convertedValue === "string").toBeTruthy();
+      expect(convertedValue as string).toEqual(
+        expect.not.stringMatching(dangerousTags)
+      );
     });
   });
 });
